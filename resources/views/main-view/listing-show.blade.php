@@ -127,379 +127,71 @@
                         </div>
                         <div id="listing-view" class="listing-box-list">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-1-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-1-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo1.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-chef"></i>رستوران</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Restaurant"><a
-                                                                href="#"><i class="flaticon-chef"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-2-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-2-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo2.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-coffee-cup"></i>کافه</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Bar &amp; Cafe"><a
-                                                                href="#"><i class="flaticon-coffee-cup"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                @foreach($listings as $listing)
+                                    <div class="col-lg-6">
+                                        <div class="product-box">
+                                            <div class="item-img bg--gradient-50">
+                                                <div class="item-status status-open active">باز</div>
+                                                <div class="item-status status-save">صرفه جویی 15٪</div>
+                                                <img src="{{asset('main-view/img/listing/listing-1-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
+                                                <img src="{{asset('main-view/img/listing/listing-1-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
+                                                <ul class="item-rating">
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><i class="fas fa-star"></i></li>
+                                                    <li><span>8.4<span> / 10</span></span> </li>
+                                                </ul>
+                                                <div class="item-logo"><img src="{{asset('main-view/img/listing/logo1.png')}}" alt="Logo"></div>
+                                            </div>
+                                            <div class="item-content">
+                                                <h3 class="item-title"><a href="#">{{$listing->jobtitle}}</a></h3>
+                                                <p class="item-paragraph">{{$listing->post_content}}</p>
+                                                <ul class="contact-info">
+                                                    <li><i class="fas fa-map-marker-alt"></i>
+                                                        @if(! empty($listing->website))
+                                                            {{$listing->postaladdress}}
+                                                        @else
+                                                            {{$isnull}}
+                                                        @endif
+                                                    </li>
+                                                    <li><i class="flaticon-phone-call"></i>
+                                                        @if(! empty($listing->website))
+                                                            {{$listing->phonenumber}}
+                                                        @else
+                                                            {{$isnull}}
+                                                        @endif
+                                                    </li>
+                                                    <li><i class="fas fa-globe"></i>
+                                                        @if(! empty($listing->website))
+                                                            {{$listing->website}}
+                                                        @else
+                                                            {{$isnull}}
+                                                        @endif
+                                                    </li>
+                                                </ul>
+                                                <ul class="meta-item">
+                                                    <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
+                                                    <li class="ctg-name"><a href="#"><i class="flaticon-chef"></i>رستوران</a></li>
+                                                    <li class="entry-meta">
+                                                        <ul>
+                                                            <li class="tooltip-item ctg-icon" data-tips="Restaurant"><a
+                                                                    href="#"><i class="flaticon-chef"></i></a></li>
+                                                            <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
+                                                                        class="fas fa-heart"></i></a></li>
+                                                            <li class="tooltip-item" data-tips="گالری"><a href="#"><i
+                                                                        class="far fa-image"></i></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save active">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-3-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-3-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo3.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-spa"></i>زیبایی</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Beauty &amp; Spa"><a
-                                                                href="#"><i class="flaticon-spa"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-4-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-4-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo4.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-supermarket"></i>فروشگاه</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Shopping"><a href="#"><i
-                                                                    class="flaticon-supermarket"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save active">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-5-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-5-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo5.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-musical-note"></i>کلوپ شبانه</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Nightlife"><a href="#"><i
-                                                                    class="flaticon-musical-note"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-6-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-6-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo6.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-bed"></i>هتل</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Hotel"><a href="#"><i
-                                                                    class="flaticon-bed"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-2-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-2-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo2.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-coffee-cup"></i>کافه</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Bar &amp; Cafe"><a
-                                                                href="#"><i class="flaticon-coffee-cup"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="product-box">
-                                        <div class="item-img bg--gradient-50">
-                                            <div class="item-status status-open active">باز</div>
-                                            <div class="item-status status-save active">صرفه جویی 15٪</div>
-                                            <img src="{{asset('main-view/img/listing/listing-3-1.jpg')}}" alt="Listing" class="img-fluid grid-view-img">
-                                            <img src="{{asset('main-view/img/listing/listing-3-2.jpg')}}" alt="Listing" class="img-fluid list-view-img">
-                                            <ul class="item-rating">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><span>8.4<span> / 10</span></span> </li>
-                                            </ul>
-                                            <div class="item-logo"><img src="{{asset('main-view/img/listing/logo3.png')}}" alt="Logo"></div>
-                                        </div>
-                                        <div class="item-content">
-                                            <h3 class="item-title"><a href="#">رستوران وستفیلد</a></h3>
-                                            <p class="item-paragraph">لورم ایپسوم متن ساختگی با تولید سادگی ...
-                                            </p>
-                                            <ul class="contact-info">
-                                                <li><i class="fas fa-map-marker-alt"></i>ایران، تهران، تهران، ساختمان تبانی</li>
-                                                <li><i class="flaticon-phone-call"></i>+ 132 899 6330</li>
-                                                <li><i class="fas fa-globe"></i>www.restauant.com</li>
-                                            </ul>
-                                            <ul class="meta-item">
-                                                <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
-                                                <li class="ctg-name"><a href="#"><i class="flaticon-spa"></i>زیبایی</a></li>
-                                                <li class="entry-meta">
-                                                    <ul>
-                                                        <li class="tooltip-item ctg-icon" data-tips="Beauty &amp; Spa"><a
-                                                                href="#"><i class="flaticon-spa"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="مورد علاقه من"><a href="#"><i
-                                                                    class="fas fa-heart"></i></a></li>
-                                                        <li class="tooltip-item" data-tips="گالری"><a href="#"><i
-                                                                    class="far fa-image"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <ul class="pagination-layout1">
-                                <li>
-                                    <a href="#"><i class="flaticon-back"></i></a>
-                                </li>
-                                <li class="active">
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">6</a>
-                                </li>
-                                <li>
-                                    <a href="#">7</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="flaticon-right-arrow"></i></a>
-                                </li>
+                                {{$listings->render('main-view.partials.pagination')}}
                             </ul>
                         </div>
                     </div>
