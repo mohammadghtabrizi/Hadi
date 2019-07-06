@@ -10,4 +10,9 @@ class IndexController extends Controller
 
     	return view('main-view/home-page');
     }
+
+    public function listingshow(){
+
+    	return view('main-view/listing-show');
+    }
 }

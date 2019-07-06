@@ -13,3 +13,9 @@
 
 Route::get('/', 'IndexController@index')->name('home_page');
 
+Route::group(['prefix' => 'listing'],function(){
+
+		Route::get('/','IndexController@listingshow')->name('listing_show');
+
+	});
+
