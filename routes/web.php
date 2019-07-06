@@ -17,5 +17,7 @@ Route::group(['prefix' => 'listing'],function(){
 
 		Route::get('/','IndexController@listingshow')->name('listing_show');
 
+		Route::get('/detail_show/{id}','IndexController@listingdetailshow')->name('listing_detail_show');
+
 	});
 

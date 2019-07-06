@@ -15,7 +15,7 @@ class IndexController extends Controller
 
     public function listingshow(){
 
-    	$listings = Sample::select('jobtitle','post_content','phonenumber','website','postaladdress')
+    	$listings = Sample::select('id','jobtitle','post_content','phonenumber','website','postaladdress')
     		->paginate(20);
 
 
@@ -26,5 +26,23 @@ class IndexController extends Controller
     		'isnull' => "اطلاعاتی دردسترس نیست"
 
     	]);
+    }
+
+
+    public function listingdetailshow(Request $request,$id){
+
+        $listing = Sample::select('sample.*')
+            ->where('id','=',$id)
+            ->first();
+
+        return view('main-view/listing-detail-show')->with([
+
+            'listing' => $listing,
+            
+            'isnull' => "اطلاعاتی دردسترس نیست"
+
+        ]);
+
+
     }
 }

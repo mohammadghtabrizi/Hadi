@@ -71,13 +71,7 @@
                                     <li><a href="#">صفحه اصلی</a></li>
                                     <li><a href="about-us.html">درباره</a></li>
                                     <li><a href="{{route('listing_show')}}">آگهی</a></li>
-                                    <li><a href="#">بلاگ</a>
-                                        <ul class="dropdown-menu-col-1">
-                                            <li><a href="blog-grid.html">بلاگ شبکه ای</a></li>
-                                            <li><a href="blog-list.html">بلاگی لیستی</a></li>
-                                            <li><a href="single-blog.html">جزئیات بلاگ</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#">بلاگ</a></li>
                                     <li><a href="contact.html">تماس</a></li>
                                 </ul>
                             </nav>

@@ -71,13 +71,7 @@
                                     <li><a href="#">صفحه اصلی</a></li>
                                     <li><a href="about-us.html">درباره</a></li>
                                     <li><a href="{{route('listing_show')}}">آگهی</a></li>
-                                    <li><a href="#">بلاگ</a>
-                                        <ul class="dropdown-menu-col-1">
-                                            <li><a href="blog-grid.html">بلاگ شبکه ای</a></li>
-                                            <li><a href="blog-list.html">بلاگی لیستی</a></li>
-                                            <li><a href="single-blog.html">جزئیات بلاگ</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="#">بلاگ</a></li>
                                     <li><a href="contact.html">تماس</a></li>
                                 </ul>
                             </nav>
@@ -146,18 +140,18 @@
                                                 <div class="item-logo"><img src="{{asset('main-view/img/listing/logo1.png')}}" alt="Logo"></div>
                                             </div>
                                             <div class="item-content">
-                                                <h3 class="item-title"><a href="#">{{$listing->jobtitle}}</a></h3>
+                                                <h3 class="item-title"><a href="{{route('listing_detail_show',['id' => $listing->id])}}">{{$listing->jobtitle}}</a></h3>
                                                 <p class="item-paragraph">{{$listing->post_content}}</p>
                                                 <ul class="contact-info">
                                                     <li><i class="fas fa-map-marker-alt"></i>
-                                                        @if(! empty($listing->website))
+                                                        @if(! empty($listing->postaladdress))
                                                             {{$listing->postaladdress}}
                                                         @else
                                                             {{$isnull}}
                                                         @endif
                                                     </li>
                                                     <li><i class="flaticon-phone-call"></i>
-                                                        @if(! empty($listing->website))
+                                                        @if(! empty($listing->phonenumber))
                                                             {{$listing->phonenumber}}
                                                         @else
                                                             {{$isnull}}
@@ -172,7 +166,7 @@
                                                     </li>
                                                 </ul>
                                                 <ul class="meta-item">
-                                                    <li class="item-btn"><a href="#" class="btn-fill">جزئیات</a></li>
+                                                    <li class="item-btn"><a href="{{route('listing_detail_show',['id' => $listing->id])}}" class="btn-fill">جزئیات</a></li>
                                                     <li class="ctg-name"><a href="#"><i class="flaticon-chef"></i>رستوران</a></li>
                                                     <li class="entry-meta">
                                                         <ul>
